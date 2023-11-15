@@ -1,0 +1,72 @@
+{
+	"info": {
+		"_postman_id": "3fc0e717-fb76-4b2f-aee6-6c194b564ab8",
+		"name": "Task Collection",
+		"description": "- Post (add user)\n    \n- Get (get user by ID & Access Token)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14334852",
+		"_collection_link": "https://martian-comet-360232.postman.co/workspace/cf0cf6fc-75ce-4ba3-a897-72950e8638dd/collection/14334852-3fc0e717-fb76-4b2f-aee6-6c194b564ab8?action=share&source=collection_link&creator=14334852"
+	},
+	"item": [
+		{
+			"name": "Get (get user by ID & Access Token)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJrYXJlZW1Ac2FxYXlhLmNvbSIsImlhdCI6MTcwMDA2Mzk2MiwiZXhwIjoxNzAwMDY3NTYyfQ.4tdgX_rCdIOOmSSNqxOWu-ZjVCbbebIfM2oQ0mhRvlk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/user/9eb9eb9ecf90bd5b71ea4108829ee91b43538632",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"9eb9eb9ecf90bd5b71ea4108829ee91b43538632"
+					]
+				},
+				"description": "get user by ID & Access Token"
+			},
+			"response": []
+		},
+		{
+			"name": "Post (add user)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"firstName\": \"Kareem\",\r\n  \"lastName\": \"Ezzat\",\r\n  \"email\": \"kareem@saqaya.com\",\r\n  \"marketingConsent\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"user"
+					]
+				},
+				"description": "add user and get ID & Access Token"
+			},
+			"response": []
+		}
+	]
+}
